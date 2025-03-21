@@ -60,7 +60,7 @@ Tab:AddSlider({
 * criar botão
 
 ``` Lua
-local Button = Tab:AddButton({"nome do seu botão})
+local Button = Tab:AddButton({"nome do seu botão"})
 ```
 
 * criar dropdown
