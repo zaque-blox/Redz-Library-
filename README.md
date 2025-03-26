@@ -23,6 +23,36 @@ Window:AddMinimizeButton({
     Corner = { CornerRadius = UDim.new(35, 1) },
 })
 ```
+
+* discord invite
+
+``` Lua
+Tab1:AddDiscordInvite({
+    Name = "Name Hub",
+    Description = "Join server",
+    Logo = "rbxassetid://18751483361",
+    Invite = "Link discord invite",
+})
+```
+
+# set Theme
+
+Dark
+``` Lua
+redzlib:SetTheme("Dark")
+```
+
+Darker
+
+``` Lua
+redzlib:SetTheme("Darker")
+```
+
+Purple
+``` Lua
+redzlib:SetTheme("Purple")
+```
+
 * criar aba
     
 ``` Lua
