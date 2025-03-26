@@ -1,11 +1,11 @@
 # Redz Library v5
 
-   * carregar gui
+ ## carregar gui
   
 ``` Lua
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
 ```
-* criar janela
+ ## criar janela
     
 ``` Lua
 local Window = redzlib:MakeWindow({
@@ -15,7 +15,7 @@ local Window = redzlib:MakeWindow({
 })
 ```
 
-* icone flutuante minimize
+## icone flutuante minimize
 
 ``` Lua
 Window:AddMinimizeButton({
@@ -24,7 +24,7 @@ Window:AddMinimizeButton({
 })
 ```
 
-* discord invite
+ ## discord invite
 
 ``` Lua
 Tab1:AddDiscordInvite({
@@ -35,7 +35,7 @@ Tab1:AddDiscordInvite({
 })
 ```
 
-# set Theme
+ ## set Theme
 
 Dark
 ``` Lua
@@ -53,25 +53,25 @@ Purple
 redzlib:SetTheme("Purple")
 ```
 
-* criar aba
+ ## criar aba
     
 ``` Lua
 local Tab1 = Window:MakeTab({"nome da aba", "Icone da aba"})
 ```
 
-* criar sessão
+ ## criar sessão
 
 ``` Lua
 local Section = Tab:AddSection({"nome da sessão"})
 ```
 
-* criar parágrafo
+ ## criar parágrafo
     
 ``` Lua
  local Paragraph = Tab:AddParagraph({"nome do seu parágrafo", ""})
 ```
 
-* criar toggle
+ ## criar toggle
 
 ``` Lua
 local Toggle = Tab:AddToggle({
@@ -80,7 +80,7 @@ local Toggle = Tab:AddToggle({
 })
 ```
 
-* criar slider
+ ## criar slider
 
 ``` Lua
 Tab:AddSlider({
@@ -95,13 +95,13 @@ Tab:AddSlider({
 })
 ```
 
-* criar botão
+ ## criar botão
 
 ``` Lua
 local Button = Tab:AddButton({"nome do seu botão"})
 ```
 
-* criar dropdown
+ ## criar dropdown
 
 ``` Lua
 local Dropdown = Tab:AddDropdown({
