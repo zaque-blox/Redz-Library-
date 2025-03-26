@@ -3,7 +3,7 @@
    * carregar gui
   
 ``` Lua
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/realredz/RedzLibV5/refs/heads/main/Source.lua"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
 ```
 * criar janela
     
@@ -15,6 +15,14 @@ local Window = redzlib:MakeWindow({
 })
 ```
 
+* icone flutuante minimize
+
+``` Lua
+Window:AddMinimizeButton({
+    Button = { Image = "rbxassetid://71014873973869", BackgroundTransparency = 0 },
+    Corner = { CornerRadius = UDim.new(35, 1) },
+})
+```
 * criar aba
     
 ``` Lua
