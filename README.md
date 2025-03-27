@@ -103,7 +103,7 @@ local Button = Tab:AddButton({"nome do seu botão"})
 
  #### criar dropdown
 
-``` Lua
+``` 
 local Dropdown = Tab:AddDropdown({
   Name = "nome do seu dropdow ",
   Description = "",
