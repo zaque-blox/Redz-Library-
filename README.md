@@ -115,3 +115,16 @@ local Dropdown = Tab:AddDropdown({
   end
 })
 ```
+
+#### criar text box
+
+``` Lua
+Tab1:AddTextBox({
+  Name = "Name item",
+  Description = "1 Item on 1 Server", 
+  PlaceholderText = "item only",
+  Callback = function(Value)
+    
+  end
+})
+```
