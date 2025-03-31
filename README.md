@@ -133,7 +133,7 @@ Tab1:AddTextBox({
 
 ``` Lua
 -- Carregar elementos
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/sertbao143/Library-ui/refs/heads/main/Redzhubui"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
 
 -- Criar Janela
 local Window = redzlib:MakeWindow({
