@@ -3,7 +3,7 @@
  #### carregar gui
   
 ``` Lua
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/sertbao143/Library-ui/refs/heads/main/Redzhubui"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
 ```
  #### criar janela
     
