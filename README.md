@@ -3,7 +3,7 @@
  #### carregar gui
   
 ``` Lua
-local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/sertbao143/Library-ui/refs/heads/main/Redzhubui"))()
 ```
  #### criar janela
     
@@ -68,7 +68,7 @@ local Section = Tab:AddSection({"nome da sessão"})
  #### criar parágrafo
     
 ``` Lua
- local Paragraph = Tab:AddParagraph({"nome do seu parágrafo", ""})
+local Paragraph = Tab:AddParagraph({"nome do seu parágrafo", ""})
 ```
 
  #### criar toggle
@@ -127,4 +127,65 @@ Tab1:AddTextBox({
     
   end
 })
+```
+
+### Exemplo
+
+``` Lua
+-- Carregar elementos
+local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/sertbao143/Library-ui/refs/heads/main/Redzhubui"))()
+
+-- Criar Janela
+local Window = redzlib:MakeWindow({
+  Title = "SEU HUB", -- Nome Do seu script
+  SubTitle = "by", -- Criado por
+  SaveFolder = "ConfigFolder" -- Pasta de configurações 
+})
+
+-- Botão minimize
+Window:AddMinimizeButton({
+    Button = { Image = "rbxassetid://71014873973869", BackgroundTransparency = 0 },
+    Corner = { CornerRadius = UDim.new(35, 1) },
+})
+
+-- Criar Aba Main
+local MainTab = Window:MakeTab({"Main", "Home"})
+
+-- Sessão Main
+local Section = MainTab:AddSection({"Main"})
+
+local playerName = game.Players.LocalPlayer.Name
+
+-- Criar parágrafo Com o nick do Local Player
+local Paragraph = MainTab:AddParagraph({"Seja Bem vindo(a) " .. playerName .. "!", ""})
+
+local Toggle = MainTab:AddToggle({
+  Name = "Toggle",
+  Default = false
+})
+
+MainTab:AddSlider({
+  Name = "slider",
+  Min = 1,
+  Max = 10,
+  Increase = 1,
+  Default = 5,
+  Callback = function(Value)
+    
+  end
+})
+
+local Button = MainTab:AddButton({"botão"})
+
+local Dropdown = Tab:AddDropdown({
+  Name = "nome do seu dropdow ",
+  Description = "",
+  Options = {"um", "dois", "três"},
+  Default = "um",
+  Flag = "dropdown",
+  Callback = function(Value)
+    
+  end
+})
+
 ```
