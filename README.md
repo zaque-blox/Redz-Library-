@@ -9,9 +9,9 @@ local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao1
     
 ``` Lua
 local Window = redzlib:MakeWindow({
-  Title = "título do seu script",
-  SubTitle = "criado por",
-  SaveFolder = "pasta de configurações"
+  Title = "Yor Hub",
+  SubTitle = "by Jubileu",
+  SaveFolder = "ConfigFolder"
 })
 ```
 
