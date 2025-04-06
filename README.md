@@ -56,7 +56,7 @@ redzlib:SetTheme("Purple")
  #### criar aba
     
 ``` Lua
-local Tab1 = Window:MakeTab({"nome da aba", "Icone da aba"})
+local Tab = Window:MakeTab({"nome da aba", "nome do icone"})
 ```
 
  #### criar sessão
@@ -75,22 +75,31 @@ local Paragraph = Tab:AddParagraph({"nome do seu parágrafo", ""})
 
 ``` Lua
 local Toggle = Tab:AddToggle({
-  Name = "nome do seu toggle",
-  Default = false
+  Name = "Toggle",
+  Default = false,
+  Flag = "MyToggleFlag",
+  Callback = function(Value)
+    if Value then
+      print("Toggle ativado!")
+    else
+      print("Toggle desativado!")
+    end
+  end
 })
 ```
 
  #### criar slider
 
 ``` Lua
-Tab:AddSlider({
-  Name = "nome do seu Slider",
+MainTab:AddSlider({
+  Name = "Slider",
   Min = 1,
   Max = 10,
   Increase = 1,
   Default = 5,
+  Flag = "MySliderFlag",
   Callback = function(Value)
-    
+    print("Valor do Slider: " .. Value)
   end
 })
 ```
@@ -105,13 +114,13 @@ local Button = Tab:AddButton({"nome do seu botão"})
 
 ``` Lua
 local Dropdown = Tab:AddDropdown({
-  Name = "nome do seu dropdow ",
+  Name = "Dropdown",
   Description = "",
-  Options = {"um", "dois", "três"},
-  Default = "two",
-  Flag = "dropdown",
+  Options = {"Um", "Dois", "Três"},
+  Default = "Um",
+  Flag = "MyDropdownFlag",
   Callback = function(Value)
-    
+    print("Dropdown selecionado: " .. Value)
   end
 })
 ```
@@ -120,11 +129,12 @@ local Dropdown = Tab:AddDropdown({
 
 ``` Lua
 Tab1:AddTextBox({
-  Name = "Name item",
-  Description = "1 Item on 1 Server", 
-  PlaceholderText = "item only",
+  Name = "Name Item",
+  Description = "1 Item on 1 Server",
+  PlaceholderText = "Digite algo",
+  Flag = "MyTextBoxFlag",
   Callback = function(Value)
-    
+    print("Texto digitado: " .. Value)
   end
 })
 ```
@@ -161,30 +171,49 @@ local Paragraph = MainTab:AddParagraph({"Seja Bem vindo(a) " .. playerName .. "!
 
 local Toggle = MainTab:AddToggle({
   Name = "Toggle",
-  Default = false
+  Default = false,
+  Flag = "MyToggleFlag",
+  Callback = function(Value)
+    if Value then
+      print("Toggle ativado!")
+    else
+      print("Toggle desativado!")
+    end
+  end
 })
 
 MainTab:AddSlider({
-  Name = "slider",
+  Name = "Slider",
   Min = 1,
   Max = 10,
   Increase = 1,
   Default = 5,
+  Flag = "MySliderFlag",
   Callback = function(Value)
-    
+    print("Valor do Slider: " .. Value)
   end
 })
 
 local Button = MainTab:AddButton({"botão"})
 
-local Dropdown = Tab:AddDropdown({
-  Name = "nome do seu dropdow ",
+local Dropdown = MainTab:AddDropdown({
+  Name = "nome do seu dropdown",
   Description = "",
   Options = {"um", "dois", "três"},
   Default = "um",
   Flag = "dropdown",
   Callback = function(Value)
     
+  end
+}
+
+MainTab:AddTextBox({
+  Name = "Name Item",
+  Description = "1 Item on 1 Server",
+  PlaceholderText = "Digite algo",
+  Flag = "MyTextBoxFlag",
+  Callback = function(Value)
+    print("Texto digitado: " .. Value)
   end
 })
 
