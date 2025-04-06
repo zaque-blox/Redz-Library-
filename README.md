@@ -1,11 +1,11 @@
 ## Redz Library v5
 
- #### carregar gui
+ #### load
   
 ``` Lua
 local redzlib = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/Library-ui/refs/heads/main/Redzhubui"))()
 ```
- #### criar janela
+ #### window
     
 ``` Lua
 local Window = redzlib:MakeWindow({
@@ -15,7 +15,7 @@ local Window = redzlib:MakeWindow({
 })
 ```
 
-#### icone flutuante minimize
+#### minimize
 
 ``` Lua
 Window:AddMinimizeButton({
@@ -53,25 +53,25 @@ Purple
 redzlib:SetTheme("Purple")
 ```
 
- #### criar aba
+ #### aba
     
 ``` Lua
-local Tab = Window:MakeTab({"nome da aba", "nome do icone"})
+local Tab = Window:MakeTab({"Aba", "icone name"})
 ```
 
- #### criar sessão
+ #### section
 
 ``` Lua
-local Section = Tab:AddSection({"nome da sessão"})
+local Section = Tab:AddSection({"section"})
 ```
 
- #### criar parágrafo
-    
+ #### paragraph
+ 
 ``` Lua
-local Paragraph = Tab:AddParagraph({"nome do seu parágrafo", ""})
+local Paragraph = Tab:AddParagraph({"Paragraph", ""})
 ```
 
- #### criar toggle
+ #### toggle
 
 ``` Lua
 local Toggle = Tab:AddToggle({
@@ -88,10 +88,10 @@ local Toggle = Tab:AddToggle({
 })
 ```
 
- #### criar slider
+ #### slider
 
 ``` Lua
-MainTab:AddSlider({
+Tab:AddSlider({
   Name = "Slider",
   Min = 1,
   Max = 10,
@@ -104,13 +104,13 @@ MainTab:AddSlider({
 })
 ```
 
- #### criar botão
+ #### Button
 
 ``` Lua
-local Button = Tab:AddButton({"nome do seu botão"})
+local Button = Tab:AddButton({"button"})
 ```
 
- #### criar dropdown
+ #### dropdown
 
 ``` Lua
 local Dropdown = Tab:AddDropdown({
@@ -125,14 +125,13 @@ local Dropdown = Tab:AddDropdown({
 })
 ```
 
-#### criar text box
+#### text box
 
 ``` Lua
-Tab1:AddTextBox({
+Tab:AddTextBox({
   Name = "Name Item",
   Description = "1 Item on 1 Server",
   PlaceholderText = "Digite algo",
-  Flag = "MyTextBoxFlag",
   Callback = function(Value)
     print("Texto digitado: " .. Value)
   end
@@ -205,13 +204,12 @@ local Dropdown = MainTab:AddDropdown({
   Callback = function(Value)
     
   end
-}
+})
 
 MainTab:AddTextBox({
   Name = "Name Item",
   Description = "1 Item on 1 Server",
   PlaceholderText = "Digite algo",
-  Flag = "MyTextBoxFlag",
   Callback = function(Value)
     print("Texto digitado: " .. Value)
   end
