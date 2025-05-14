@@ -35,24 +35,6 @@ Tab1:AddDiscordInvite({
 })
 ```
 
- #### set Theme
-
-Dark
-``` Lua
-redzlib:SetTheme("Dark")
-```
-
-Darker
-
-``` Lua
-redzlib:SetTheme("Darker")
-```
-
-Purple
-``` Lua
-redzlib:SetTheme("Purple")
-```
-
  #### aba
     
 ``` Lua
